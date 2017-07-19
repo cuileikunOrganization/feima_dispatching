@@ -187,8 +187,7 @@ public class GoodDetailActivity extends BaseActivity implements GoodsDetailContr
     }
 
     private void requestGoodsSpecification() {
-        SpecificationDialog dialog = new SpecificationDialog();
-        dialog.setInstance(dialog);
+        SpecificationDialog dialog = SpecificationDialog.newInstance();
         dialog.setImageLoadHelper(mImageLoaderHelper);
         dialog.productSpecification(mGoodsInfo);
         if(mBuProcessor.getShopInfo()!=null){
